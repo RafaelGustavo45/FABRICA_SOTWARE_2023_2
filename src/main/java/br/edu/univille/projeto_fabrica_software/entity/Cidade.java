@@ -12,7 +12,14 @@ public class Cidade {
     private long id;
     private String nome;
     private String estado;
+ 
 
+    public String getEstado() {
+        return estado;
+    }
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
     public long getId() {
         return id;
     }
@@ -25,12 +32,7 @@ public class Cidade {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public String getEstado() {
-        return estado;
-    }
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
+    
 
 
   
