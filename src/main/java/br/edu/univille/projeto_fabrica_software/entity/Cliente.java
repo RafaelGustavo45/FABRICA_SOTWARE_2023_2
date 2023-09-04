@@ -1,6 +1,5 @@
 package br.edu.univille.projeto_fabrica_software.entity;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,7 +24,7 @@ public class Cliente {
     private Date dataNascimento;
     
     @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH})
-    private Cidade cidade;
+    private Cidade cidade; // --> 1
 
     public Cidade getCidade() {
         return cidade;

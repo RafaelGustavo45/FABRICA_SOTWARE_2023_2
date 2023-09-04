@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.Date;
 
 @Entity
-public class Manutencao {
+public class ManutencaoCarro {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;

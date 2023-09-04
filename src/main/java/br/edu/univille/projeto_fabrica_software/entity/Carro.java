@@ -15,12 +15,12 @@ public class Carro {
 
     @OneToMany
     @JoinColumn(name= "id_carro")
-    private List<Manutencao> listaHistoricoManutencao = new ArrayList<>();
+    private List<ManutencaoCarro> listaHistoricoManutencao = new ArrayList<>();
 
-    public List<Manutencao> getListaHistoricoManutencao() {
+    public List<ManutencaoCarro> getListaHistoricoManutencao() {
         return listaHistoricoManutencao;
     }
-    public void setListaHistoricoManutencao(List<Manutencao> listaHistoricoManutencao) {
+    public void setListaHistoricoManutencao(List<ManutencaoCarro> listaHistoricoManutencao) {
         this.listaHistoricoManutencao = listaHistoricoManutencao;
     }
     public long getId() {
