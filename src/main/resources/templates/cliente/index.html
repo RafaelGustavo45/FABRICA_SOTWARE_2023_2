@@ -14,9 +14,9 @@
                  </tr>
                </thead>
                <tbody>
-                  <tr>
-                    <td>Zezão</td>
-                    <td>184.068.564-46</td>
+                  <tr th:each="umCliente: ${listaClientes}">
+                    <td th:text="${umCliente.nome}"></td>
+                    <td th:text="${umCliente.cpf}"></td>
                   </tr>
                  
                </tbody>

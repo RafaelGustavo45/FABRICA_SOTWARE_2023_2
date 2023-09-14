@@ -1,9 +1,10 @@
 package br.edu.univille.projeto_fabrica_software.service;
-import br.edu.univille.projeto_fabrica_software.entity.Cliente;
+
+import br.edu.univille.projeto_fabrica_software.entity.ClienteReparo;
 import java.util.List;
 
 public interface ClienteService {
-    //concentrar a logica
+    // concentrar a logica
 
-    List<Cliente> getAll();
+    List<ClienteReparo> getAll();
 }
