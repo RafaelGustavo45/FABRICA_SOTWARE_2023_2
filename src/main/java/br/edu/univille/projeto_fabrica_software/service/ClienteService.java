@@ -7,4 +7,6 @@ public interface ClienteService {
     // concentrar a logica
 
     List<ClienteReparo> getAll();
+
+    void save(ClienteReparo clienteReparo);
 }

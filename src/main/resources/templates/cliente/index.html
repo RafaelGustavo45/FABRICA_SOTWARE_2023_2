@@ -4,8 +4,10 @@
     <body>
         <nav th:replace="layout :: menu">(menu)</nav>
         <main>
-            <h1>Clientes</h1>
+            <h1>Clientes Reparo</h1>
             <hr>
+
+            <a th:href="@{/clientes/novo}" class ="btn btn-primary">novo</a>
             <table class="table">
                <thead>
                  <tr>
