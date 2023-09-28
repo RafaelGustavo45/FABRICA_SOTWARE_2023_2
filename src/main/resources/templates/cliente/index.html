@@ -8,23 +8,49 @@
             <hr>
 
             <a th:href="@{/clientes/novo}" class ="btn btn-primary">novo</a>
-            <table class="table">
+            <table class="table" id="tabclientes">
                <thead>
                  <tr>
                     <th>Nome</th>
                     <th>Cpf</th>
+                    <th></th>
                  </tr>
                </thead>
                <tbody>
                   <tr th:each="umCliente: ${listaClientes}">
                     <td th:text="${umCliente.nome}"></td>
                     <td th:text="${umCliente.cpf}"></td>
+                    <td> <a class ="btn btn-secondary" th:href="@{'clientes/alterar/' + ${umCliente.id}}">Alterar</a>
+                    <button
+                    th:data-id="${umCliente.id}"
+                    class ="btn btn-danger js-delete">Excluir</button>  
+                    </td>
                   </tr>
                  
                </tbody>
 
             </table>
         </main>
+
+        <div class="modal" tabindex="-1" id="modalcliente">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Excluir cliente</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>tem certeza que deseja excluir o cliente?</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">NAO</button>
+                <button type="button" class="btn btn-primary" id="btnsim">SIM</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div th:include="layout :: footer">(footer)</div>
+        <script th:src="@{/script.js}"></script>
     </body>
 </html>

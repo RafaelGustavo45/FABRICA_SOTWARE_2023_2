@@ -2,6 +2,7 @@ package br.edu.univille.projeto_fabrica_software.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -60,9 +61,15 @@ public class ClienteController {
        return new ModelAndView("cliente/form","cliente",novoCliente);
     }
 
-    @PostMapping(params = "form")
-    public ModelAndView save(ClienteReparo clienteReparo){
-        service.save(clienteReparo);
+    @PostMapping
+    public ModelAndView save(ClienteReparo clientereparo){
+        service.save(clientereparo);
         return new ModelAndView("redirect:/clientes");
+    }
+
+    @GetMapping("/alterar/{id}")
+    public ModelAndView alterar(@PathVariable("id") ClienteReparo clientereparo){
+
+        return new ModelAndView("cliente/form","cliente",clientereparo);
     }
 }
