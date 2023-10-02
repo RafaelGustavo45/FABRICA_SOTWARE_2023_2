@@ -72,4 +72,11 @@ public class ClienteController {
 
         return new ModelAndView("cliente/form","cliente",clientereparo);
     }
+
+    @GetMapping("/remover/{id}")
+    public ModelAndView remover(
+            @PathVariable("id") ClienteReparo clientereparo){
+        service.delete(clientereparo);
+        return new ModelAndView("redirect:/clientes");
+    }
 }

@@ -27,4 +27,10 @@ public class ClienteServiceImpl implements ClienteService {
         repository.save(clienteReparo);
     }
 
+    @Override
+    public void delete(ClienteReparo clienteReparo) {
+        // TODO Auto-generated method stub
+        repository.delete(clienteReparo);
+    }
+
 }
