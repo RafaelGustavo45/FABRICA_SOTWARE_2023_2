@@ -4,27 +4,27 @@
     <body>
         <nav th:replace="layout :: menu">(menu)</nav>
         <main>
-            <h1>Clientes Reparo</h1>
+            <h1>Computador Reparo</h1>
             <hr>
 
-            <a th:href="@{/clientes/novo}" class ="btn btn-primary">novo</a>
-            <table class="table" id="tabclientes">
+            <a th:href="@{/computadores/novo}" class ="btn btn-primary">novo</a>
+            <table class="table" id="tabcomputadores">
                <thead>
                  <tr>
-                    <th>Nome</th>
-                    <th>Cpf</th>
-                    <th>U</th>
+                    <th>Codigo</th>
+                    <th>Estado Reparo</th>
+                    <th>Problema</th>
                     <th></th>
                  </tr>
                </thead>
                <tbody>
-                  <tr th:each="umCliente: ${listaClientes}">
-                    <td th:text="${umCliente.nome}"></td>
-                    <td th:text="${umCliente.cpf}"></td>
-                    <td th:text="${umCliente.u}"></td>
-                    <td> <a class ="btn btn-secondary" th:href="@{'clientes/alterar/' + ${umCliente.id}}">Alterar</a>
+                  <tr th:each="umComputador: ${listaComputadores}">
+                    <td th:text="${umComputador.codigo}"></td>
+                    <td th:text="${umComputador.estado_reparo}"></td>
+                    <td th:text="${umComputador.problema}"></td>
+                    <td> <a class ="btn btn-secondary" th:href="@{'computadores/alterar/' + ${umComputador.id}}">Alterar</a>
                     <button
-                    th:data-id="${umCliente.id}"
+                    th:data-id="${umComputador.id}"
                     class ="btn btn-danger js-delete">Excluir</button>  
                     </td>
                   </tr>
@@ -42,7 +42,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <p>tem certeza que deseja excluir o cliente?</p>
+                <p>tem certeza que deseja excluir o computador?</p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">NAO</button>

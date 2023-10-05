@@ -16,7 +16,7 @@ public class Computador {
     private String codigo;
     private String estado_reparo;
     private String problema;
-    private String marca;
+  
     public long getId() {
         return id;
     }
@@ -40,12 +40,6 @@ public class Computador {
     }
     public void setProblema(String problema) {
         this.problema = problema;
-    }
-    public String getMarca() {
-        return marca;
-    }
-    public void setMarca(String marca) {
-        this.marca = marca;
     }
 
     

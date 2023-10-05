@@ -9,7 +9,16 @@ public class ClienteReparo {
     private long id;
     @Column(nullable = false, length = 1000)
     private String nome;
-    private Integer cpf;
+    private long cpf;
+    private String u;
+
+    public String getU() {
+        return u;
+    }
+
+    public void setU(String u) {
+        this.u = u;
+    }
 
     public long getId() {
         return id;
@@ -27,11 +36,11 @@ public class ClienteReparo {
         this.nome = nome;
     }
 
-    public Integer getCpf() {
+    public long  getCpf() {
         return cpf;
     }
 
-    public void setCpf(Integer cpf) {
+    public void setCpf(long  cpf) {
         this.cpf = cpf;
     }
 
